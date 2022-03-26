@@ -78,7 +78,7 @@ export default {
       // @ts-ignore
       cors: {
         credentials: true,
-        origin: ['https://nuxt-socket-io.netlify.app']
+        origin: ['https://socket-nuxt.herokuapp.com/']
       }
     },
     sockets: [
@@ -86,7 +86,7 @@ export default {
         name: 'home',
         url:
           process.env.NODE_ENV === 'production'
-            ? 'https://nuxt-socket-io.herokuapp.com'
+            ? 'https://socket-nuxt.herokuapp.com/'
             : 'http://localhost:3000',
         vuex: {
           mutations: ['progress --> examples/SET_PROGRESS'],
@@ -116,7 +116,7 @@ export default {
         name: 'chatSvc',
         url:
           process.env.NODE_ENV === 'production'
-            ? 'https://nuxt-socket-io.herokuapp.com'
+            ? 'https://socket-nuxt.herokuapp.com/'
             : 'http://localhost:3000'
       },
       { name: 'goodSocket', url: 'http://localhost:3000' },
